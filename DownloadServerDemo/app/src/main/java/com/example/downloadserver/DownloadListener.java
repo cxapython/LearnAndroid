@@ -1,4 +1,4 @@
-package com.example.wx_asynctask;
+package com.example.downloadserver;
 
 public interface DownloadListener {
     //通知当前下载进度

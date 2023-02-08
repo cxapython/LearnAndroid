@@ -1,8 +1,7 @@
-package com.example.wx_asynctask;
+package com.example.downloadserver;
 
 import android.os.AsyncTask;
 import android.os.Environment;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;

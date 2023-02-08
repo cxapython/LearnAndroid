@@ -1,4 +1,4 @@
-package com.example.wx_asynctask;
+package com.example.downloadserver;
 
 import org.junit.Test;
 

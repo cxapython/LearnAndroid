@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "wx_asynctask"
+rootProject.name = "downloadserver"
 include ':app'

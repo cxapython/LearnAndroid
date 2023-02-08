@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.wx_asynctask'
+    namespace 'com.example.downloadserver'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.wx_asynctask"
+        applicationId "com.example.downloadserver"
         minSdk 26
         targetSdk 33
         versionCode 1
