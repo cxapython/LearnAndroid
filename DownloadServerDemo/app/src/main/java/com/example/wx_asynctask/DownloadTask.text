@@ -1,0 +1,49 @@
+//package com.example.wx_asynctask;
+//
+//import android.os.AsyncTask;
+//import android.widget.Toast;
+////代码使用模版，启动方式new DownloadTask().execute()
+//public class DownloadTask extends AsyncTask<Void,Integer,Boolean> {
+//    @Override
+//    protected void onPreExecute() {
+//        //该方法进行一些界面初始化操作，比如显示一个进度条对话框
+//        progressDialog.show(); //显示进度对话框
+//    }
+//
+//    @Override
+//    protected Boolean doInBackground(Void... voids) {
+//        //这个方法中的所有代码都在子线程中运行，所有耗时操作都在这里做。
+//        try {
+//            while (true){
+//                int downloadPercent = doDownload();
+//                publishProgress(downloadPercent);
+//                if(downloadPercent>=100){
+//                    break;
+//                }
+//            }
+//        }catch (Exception e){
+//            return false;
+//        }
+//        return true;
+//    }
+//
+//    @Override
+//    protected void onProgressUpdate(Integer... values) {
+//        //UI更新操作
+//        //在这里更新下载进度,该方法的携带的参数是从后台任务传递过来的。在这个方法中可以进行ui操作。
+//        progressDialog.setMessage("Download " +values[0] +"%");
+//    }
+//
+//    @Override
+//    protected void onPostExecute(Boolean aBoolean) {
+//        //收尾工作
+//        //后台任务执行完成，并通过return进行返回时。该方法调用。
+//        progressDialog.dismiss();//关闭进度对话框
+//        //在这里显示下载结果
+//        if(result){
+//            Toast.makeText(context,"Download succeded",Toast.LENGTH_SHORT).show();
+//        }else{
+//            Toast.makeText(context,"Download failed",Toast.LENGTH_SHORT).show();
+//        }
+//    }
+//}
