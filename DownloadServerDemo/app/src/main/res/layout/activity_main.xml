@@ -18,4 +18,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cancel Download"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="URL:"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:hint="请输入要下载的URL"
+        android:inputType="text" />
+
 </LinearLayout>

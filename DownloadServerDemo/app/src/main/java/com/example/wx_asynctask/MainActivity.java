@@ -14,11 +14,13 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private DownloadService.DownloadBinder downloadBinder;
-    private ServiceConnection connection = new ServiceConnection() {
+    private final ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             downloadBinder = (DownloadService.DownloadBinder) iBinder;
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Button startDownload = findViewById(R.id.start_download);
         Button pauseDownload = findViewById(R.id.pause_download);
-        Button cancelDownload =findViewById(R.id.cancel_download);
+        Button cancelDownload = findViewById(R.id.cancel_download);
         startDownload.setOnClickListener(this);
         pauseDownload.setOnClickListener(this);
         cancelDownload.setOnClickListener(this);
@@ -55,8 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         switch (v.getId()) {
             case R.id.start_download:
-                String url = "https://www.w3school.com.cn/i/movie.mp4";
-                downloadBinder.startDownload(url);
+//                String url = "https://www.w3school.com.cn/i/movie.mp4";
+                EditText editText = findViewById(R.id.et_url);
+                downloadBinder.startDownload(editText.getText().toString());
                 break;
             case R.id.pause_download:
                 downloadBinder.pauseDownload();

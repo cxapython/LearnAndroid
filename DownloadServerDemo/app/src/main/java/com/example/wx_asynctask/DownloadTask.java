@@ -102,8 +102,9 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
                 e.printStackTrace();
 
             }
-            return TYPE_FAILED;
         }
+        return TYPE_FAILED;
+
     }
 
     @Override
